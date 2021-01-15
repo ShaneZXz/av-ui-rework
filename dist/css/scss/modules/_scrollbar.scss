@@ -1,0 +1,39 @@
+@use 'vars';
+
+html {
+    scrollbar-width: none;
+ }
+
+ html * {
+     scrollbar-width: thin;
+ }
+
+body{
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    *{
+        &::-webkit-scrollbar{
+            width:7px;
+            height: 7px;
+            //background-color: vars.$c-light;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color:vars.$c-regdark;
+            width: 5px;
+            border-radius:35px;
+            transition: background-color 0.4s;
+            &:hover{
+                background-color: vars.$c-dark;
+            }
+        }
+        &::-webkit-scrollbar-track{
+            background-color:vars.$c-light;
+            border-radius:35px;
+            box-shadow: inset 0 0 1px rgba(0,0,0,0.5);
+        }
+    }
+}
+
