@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use 'vars';
+
+$colors: ('regular':#4594ff, 'danger':red, 'warning':#ffb045);
+$sizes: ('sm':'40px','md':'60px','lg':'80px');
+
+button {
+    &.av-btn {
+        background-color:transparent;
+        border:transparent;
+        @each $name, $color in $colors {
+            &.#{$name} {
+                background-color:$color;
+            }
+        }
+    }
+}
+
+

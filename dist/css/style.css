@@ -29,6 +29,34 @@ body *::-webkit-scrollbar-track {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
+button.av-btn {
+  background-color: transparent;
+  border: transparent;
+}
+button.av-btn.regular {
+  background-color: #4594ff;
+}
+button.av-btn.danger {
+  background-color: red;
+}
+button.av-btn.warning {
+  background-color: #ffb045;
+}
+
+html[dir=rtl] aside {
+  right: -300px;
+  left: initial;
+  transition: left 0.2s;
+}
+html[dir=rtl] aside.expanded {
+  right: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
 nav {
   display: flex;
   width: 100%;
@@ -38,16 +66,46 @@ nav {
   z-index: 300;
   top: 0;
   background-color: #4594ff;
+  justify-content: space-between;
+  z-index: 3;
+}
+nav .nav-menu {
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  background-color: white;
+  border: 0;
+  color: #4594ff;
+}
+nav .nav-menu.usermenu {
+  align-self: flex-end;
+}
+nav .nav-logo {
+  max-height: 40px;
+  max-width: auto;
+}
+
+aside.menu {
+  position: fixed;
+  display: block;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: -300px;
+  background-color: yellow;
+  z-index: 2;
+  transition: left 0.2s;
+}
+aside.menu.expanded {
+  left: 0;
 }
 
 .wrapper {
-  margin: 45px 0 0 0;
-  padding: 0 1rem;
   min-height: 100%;
 }
-
-.simplebar-scrollbar::before {
-  background-color: red;
+.wrapper .content {
+  display: block;
+  margin-top: 45px;
 }
 
 /*# sourceMappingURL=style.css.map */

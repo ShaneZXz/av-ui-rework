@@ -1,4 +1,6 @@
-$c-primary:#4594ff;
+@use 'sass:map';
+
+$c-regular:#4594ff;
 $c-danger:red;
 $c-warning:#ffb045;
 $c-dark:#565656;
@@ -14,3 +16,4 @@ $breakpoint-6:600px;
 $breakpoint-7:700px;
 $breakpoint-8:800px;
 $breakpoint-9:900px;
+
