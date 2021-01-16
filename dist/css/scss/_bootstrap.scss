@@ -8,7 +8,7 @@ html {
         aside {
             right:-300px;
             left:initial;
-            transition: left 0.2s;
+            transition: right 0.2s;
             &.expanded {
                 right:0;
             }
@@ -70,6 +70,7 @@ aside {
 
 
 .wrapper {
+    display:flex;
     min-height: 100%;
     .content {
         display:block;

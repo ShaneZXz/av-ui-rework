@@ -46,7 +46,7 @@ button.av-btn.warning {
 html[dir=rtl] aside {
   right: -300px;
   left: initial;
-  transition: left 0.2s;
+  transition: right 0.2s;
 }
 html[dir=rtl] aside.expanded {
   right: 0;
@@ -101,6 +101,7 @@ aside.menu.expanded {
 }
 
 .wrapper {
+  display: flex;
   min-height: 100%;
 }
 .wrapper .content {
